@@ -1,0 +1,7 @@
+<h3>Loading a standalone from RM01 programatically</h3>
+
+<div>
+    <button (click)="load()">Load the component</button>
+</div>
+<div #placeHolder></div>
+<div class="show-error" *ngIf="showError()===true">Your remote resource failed to load</div>

@@ -1,0 +1,5 @@
+{
+	"remote-01": "http://localhost:4201/remoteEntry.js",
+	"remote-02": "http://localhost:4202/remoteEntry.js",
+	"remote-03": "http://localhost:4203/remoteEntry.js"
+}
