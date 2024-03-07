@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { AppConfig, APP_CONFIG_TOKEN } from './app.config';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'remote-02';
+  constructor(@Inject(APP_CONFIG_TOKEN) appConfig: AppConfig){
+    
+  }
 }
+
+

@@ -65,16 +65,30 @@
 							"vendorChunk": true,
 							"extractLicenses": false,
 							"sourceMap": true,
-              "namedChunks": true,
-              "fileReplacements": [
-                {
-                  "replace": "projects/shell/src/environments/environment.ts",
-                  "with": "projects/shell/src/environments/environment.development.ts"
-                }
-              ]
+                            "namedChunks": true,
+                            "fileReplacements": [
+                             {
+                                "replace": "projects/shell/src/environments/environment.ts",
+                                "with": "projects/shell/src/environments/environment.development.ts"
+                             }
+                            ]
+						},
+						"integration": {
+							"buildOptimizer": false,
+							"optimization": false,
+							"vendorChunk": true,
+							"extractLicenses": false,
+							"sourceMap": true,
+                            "namedChunks": true,
+                            "fileReplacements": [
+                             {
+                                "replace": "projects/shell/src/environments/environment.ts",
+                                "with": "projects/shell/src/environments/environment.integration.ts"
+                             }
+                            ]
 						}
 					},
-					"defaultConfiguration": "production"
+					"defaultConfiguration": "development"
 				},
 				"serve": {
 					"builder": "ngx-build-plus:dev-server",
@@ -85,6 +99,9 @@
 						},
 						"development": {
 							"browserTarget": "shell:build:development"
+						},
+						"integration": {
+							"browserTarget": "shell:build:integration"
 						}
 					},
 					"defaultConfiguration": "development",
