@@ -98,12 +98,10 @@
 							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "shell:build:development",
-							"extraWebpackConfig": "projects/shell/webpack.development.config.js"
-						},
+							"browserTarget": "shell:build:development"
+						},	
 						"integration": {
-							"browserTarget": "shell:build:integration",
-							"extraWebpackConfig": "projects/shell/webpack.development.config.js"
+							"browserTarget": "shell:build:integration"
 						}
 					},
 					"defaultConfiguration": "development",
@@ -197,13 +195,13 @@
 							"vendorChunk": true,
 							"extractLicenses": false,
 							"sourceMap": true,
-              "namedChunks": true,
-              "fileReplacements": [
-                {
-                  "replace": "projects/remote-01/src/environments/environment.ts",
-                  "with": "projects/remote-01/src/environments/environment.development.ts"
-                }
-              ]
+          				    "namedChunks": true,
+              				"fileReplacements": [
+                				{
+                  					"replace": "projects/remote-01/src/environments/environment.ts",
+                  					"with": "projects/remote-01/src/environments/environment.development.ts"
+                				}	
+              				]
 						}
 					},
 					"defaultConfiguration": "production"
