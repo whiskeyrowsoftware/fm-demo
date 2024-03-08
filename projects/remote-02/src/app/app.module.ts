@@ -7,13 +7,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG_TOKEN,AppConfig } from './app.config';
 import { Observable, tap } from 'rxjs';
 
+const configURL: string ="/config";
+//const configURL: string ="./assets/app-config-info.json";
+
 const MY_APP_CONFIG: AppConfig = {
   openAIKey: '',
   wrsApiUrl: ''
 };
 function initializeAppFactory(httpClient: HttpClient): () => Observable<AppConfig> {
   return () =>
-    httpClient.get<AppConfig>('./assets/app-config-info.json').pipe(
+    httpClient.get<AppConfig>(configURL).pipe(
       tap((config) =>
         Object.assign(MY_APP_CONFIG, {
           ...config,
