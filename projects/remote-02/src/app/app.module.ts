@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG_TOKEN,AppConfig } from './app.config';
 import { Observable, tap } from 'rxjs';
+import { HomeComponent } from './components/home/home.component';
 
 const configURL: string ="/config";
 //const configURL: string ="./assets/app-config-info.json";
@@ -28,7 +29,8 @@ function initializeAppFactory(httpClient: HttpClient): () => Observable<AppConfi
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
