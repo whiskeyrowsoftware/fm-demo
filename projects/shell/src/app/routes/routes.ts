@@ -28,30 +28,6 @@ export const routes: Routes = [
         })
   },
   {
-    path: 'remote-02',
-    loadChildren: async () =>
-      await loadRemoteModule({
-        type: 'manifest',
-        remoteName: 'remote-02',
-        exposedModule: './home'
-      }).then(m => m.HomeComponent)
-        .catch(async () => {
-          return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
-        })
-  },
-  {
-    path: 'remote-02/AI',
-    loadChildren: async () =>
-      await loadRemoteModule({
-        type: 'manifest',
-        remoteName: 'remote-02',
-        exposedModule: './AI-Module'
-      }).then(m => m.AIModule)
-        .catch(async () => {
-          return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
-        })
-  },
-  {
     path: 'stand-alone-component',
     loadChildren: async () =>
       await loadRemoteModule({
@@ -64,6 +40,19 @@ export const routes: Routes = [
           return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
         })
   },
+  {
+    path: 'remote-02',
+    loadChildren: async () =>
+      await loadRemoteModule({
+        type: 'manifest',
+        remoteName: 'remote-02',
+        exposedModule: './Remote-02-App-Module'
+      }).then(m => m.AppModule)
+        .catch(async () => {
+          return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
+        })
+  },
+
   {
     path: 'programatically-load-stand-alone-component',
     component: Rm01StandaloneComponent,
