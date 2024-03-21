@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'remote-03',
 
   exposes: {
-    './Component': './projects/remote-03/src/app/app.component.ts',
+    './Remote-03-OpenAI-Module': './projects/remote-03/src/app/modules/open-ai/open-ai.module.ts',
   },
 
   shared: {
