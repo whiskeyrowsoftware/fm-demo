@@ -17,8 +17,12 @@
   <button mat-menu-item><a routerLink="programatically-load-stand-alone-component">Load RM01 Component Programatically</a></button>
   <button mat-menu-item [matMenuTriggerFor]="remote01">Remote-01</button>
   <button mat-menu-item [matMenuTriggerFor]="remote02">Remote-02</button>
+  <button mat-menu-item [matMenuTriggerFor]="remote03">Remote-03</button>
 </mat-menu>
 
+<mat-menu #remote03="matMenu">
+  <button mat-menu-item><a routerLink="remote-03">RM03-AppComponent</a></button>
+</mat-menu>
 <mat-menu #remote02="matMenu">
   <button mat-menu-item><a routerLink="remote-02/open-ai">RM02-OpenAIModule</a></button>
 </mat-menu>

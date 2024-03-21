@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  message: string = 'Nothing exciting going on here, however, there could be :)'
 }

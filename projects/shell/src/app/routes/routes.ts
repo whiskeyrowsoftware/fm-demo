@@ -52,6 +52,18 @@ export const routes: Routes = [
           return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
         })
   },
+  {
+    path: 'remote-03',
+    loadChildren: async () =>
+      await loadRemoteModule({
+        type: 'manifest',
+        remoteName: 'remote-03',
+        exposedModule: './Component',
+      }).then(m => m.AppComponent)
+        .catch(async () => {
+          return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
+        })
+  },
 
   {
     path: 'programatically-load-stand-alone-component',
