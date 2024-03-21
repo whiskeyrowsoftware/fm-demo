@@ -41,13 +41,13 @@ export const routes: Routes = [
         })
   },
   {
-    path: 'remote-02',
+    path: 'remote-02/open-ai',
     loadChildren: async () =>
       await loadRemoteModule({
         type: 'manifest',
         remoteName: 'remote-02',
-        exposedModule: './Remote-02-App-Module'
-      }).then(m => m.AppModule)
+        exposedModule: './Remote-02-OpenAI-Module',
+      }).then(m => m.OpenAIModule)
         .catch(async () => {
           return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
         })
