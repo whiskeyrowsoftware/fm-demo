@@ -1,10 +1,5 @@
 <div class="top-bar">
-  <ng-container *ngIf= "displayRunTime">
-    <div class="runtime">
-      <div>PROJECT: {{projName}}</div>
-      <div>MODE: {{runTimeMode}}</div>
-    </div>
-</ng-container>
+  
 <mat-toolbar color="primary">
     <button mat-icon-button [matMenuTriggerFor]="main"  class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
@@ -17,7 +12,7 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
-  </mat-toolbar>
+</mat-toolbar>
 
 <mat-menu #main="matMenu">
   <button mat-menu-item><a routerLink="">Home</a></button>

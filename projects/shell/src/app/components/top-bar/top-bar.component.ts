@@ -6,13 +6,6 @@ import { environment } from 'projects/shell/src/environments/environment';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent {
-  projName = environment.projectName
-  port = window.location.port
-  compName: string = ''
-  runTimeMode = environment.runtimeMode
-  displayRunTime = environment.displayRunTime
-  
   constructor() {
-    this.compName = this.constructor.name; 
   }  
 }
