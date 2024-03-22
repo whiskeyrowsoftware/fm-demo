@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-
+import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +7,11 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 
 export class AppComponent {
-  name: string = '';
-  title: string = '';
-  message: string =  ''
+  projName = environment.projectName
+  port = window.location.port
+  compName: string = ''
 
-  constructor(){
-    this.name = this.constructor.name
-    this.title = 'remote-02'
-    this.message = `[${this.name}] The only ones that can see this page are users with the ability to load the remote by itself`
-  }
+  constructor() {
+    this.compName = this.constructor.name;  
+  }  
 }
