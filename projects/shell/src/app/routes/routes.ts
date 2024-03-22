@@ -53,13 +53,13 @@ export const routes: Routes = [
         })
   },
   {
-    path: 'remote-03',
+    path: 'remote-03/animation',
     loadChildren: async () =>
       await loadRemoteModule({
         type: 'manifest',
         remoteName: 'remote-03',
-        exposedModule: './Component',
-      }).then(m => m.AppComponent)
+        exposedModule: './Remote-03-Animation-Module',
+      }).then(m => m.AnimationModule)
         .catch(async () => {
           return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)
         })

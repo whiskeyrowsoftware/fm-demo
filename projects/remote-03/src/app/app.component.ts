@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor(){
     this.name = this.constructor.name
-    this.title = 'remote-02'
+    this.title = 'remote-03'
     this.message = `[${this.name}] The only ones that can see this page are users with the ability to load the remote by itself`
   }
 }

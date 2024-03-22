@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { REMOTE_ROUTES } from './open-ai.routes';
-import { OpenAIHomeComponent } from './components/home/home.component';
+import { REMOTE_ROUTES } from './animation.routes';
+import { AnimationHomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
-    OpenAIHomeComponent
+    AnimationHomeComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(REMOTE_ROUTES),
   ]
 })
-export class OpenAIModule { }
+export class AnimationModule { }
