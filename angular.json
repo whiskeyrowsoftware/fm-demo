@@ -30,8 +30,7 @@
 							"projects/shell/src/assets"
 						],
 						"styles": [
-							"projects/shell/src/styles.scss",
-							"projects/shell/src/themes.scss"
+							"projects/shell/src/styles.scss"
 						],
 						"stylePreprocessorOptions": {
 							"includePaths": ["node_modules/"]

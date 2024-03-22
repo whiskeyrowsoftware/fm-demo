@@ -1,8 +1,15 @@
+<div class="top-bar">
+  <ng-container *ngIf= "displayRunTime">
+    <div class="runtime">
+      <div>PROJECT: {{projName}}</div>
+      <div>MODE: {{runTimeMode}}</div>
+    </div>
+</ng-container>
 <mat-toolbar color="primary">
     <button mat-icon-button [matMenuTriggerFor]="main"  class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Dynamic Module-Federation Demo</span>
+    <span>Whiskey Row Software - Angular Demo App</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
@@ -19,7 +26,6 @@
   <button mat-menu-item [matMenuTriggerFor]="remote02">Remote-02</button>
   <button mat-menu-item [matMenuTriggerFor]="remote03">Remote-03</button>
 </mat-menu>
-
 <mat-menu #remote03="matMenu">
   <button mat-menu-item><a routerLink="remote-03/animation">RM03-AnimationModule</a></button>
 </mat-menu>
@@ -29,5 +35,5 @@
 <mat-menu #remote01="matMenu">
   <button mat-menu-item><a routerLink="remote-01/charts">RM01-ChartsModule</a></button>
 </mat-menu>
-
+</div>
 

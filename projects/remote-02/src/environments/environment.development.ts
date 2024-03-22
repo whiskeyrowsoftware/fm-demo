@@ -1,3 +1,5 @@
 export const environment = {
-    runtimeMode: "Dev"
+    runtimeMode: "Dev",
+    projectName: "REMOTE-02",
 };
+
