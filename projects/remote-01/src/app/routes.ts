@@ -4,7 +4,7 @@ import { ChartHomeComponent } from './modules/google-charts/components/home/home
 import { MyStandAloneComponent } from './components/my-stand-alone/my-stand-alone.component';
 
 export const REMOTE_ROUTES: Routes = [
-    { path: '', component: HomeComponent, pathMatch: 'full'},
+    { path: 'home', component: HomeComponent, pathMatch: 'full'},
     { path: 'charts', component: ChartHomeComponent, pathMatch: 'full'},
     { path: 'stand-alone-component', component: MyStandAloneComponent, pathMatch: 'full'}
 ];

@@ -1,3 +1,10 @@
-<div>WELCOME TO REMOTE-01 : AppModule: port 4201</div>
-<div>The only ones that can see this page are users with the ability to load the remote by itself</div>
-<router-outlet></router-outlet>
+<div>
+    <h3>WELCOME TO [{{projName}}] running on Port [{{port}}]</h3>
+    <h3>Viewing: {{projName}}.{{compName}}</h3>
+    <p></p>
+    <div>The only ones that can see this page are users with the ability to load the remote by itself</div>
+    <p></p>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
