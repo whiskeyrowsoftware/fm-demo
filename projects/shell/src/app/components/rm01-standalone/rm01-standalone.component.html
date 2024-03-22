@@ -3,5 +3,9 @@
 <div>
     <button (click)="load()">Load the component</button>
 </div>
-<div #placeHolder></div>
+
+<div class="loaded-components">
+    <div #placeHolder></div>
+</div>
+
 <div class="show-error" *ngIf="showError()===true">Your remote resource failed to load</div>

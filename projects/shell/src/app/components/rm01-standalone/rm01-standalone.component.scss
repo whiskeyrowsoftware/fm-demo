@@ -1,3 +1,16 @@
 .show-error{
     color: red;
 }
+
+.loaded-components {
+    width:100%;
+    display: flex; // Establishes a flex container
+    flex-direction: row; // Aligns children in a row (this is the default)
+    justify-content: flex-start; // Aligns children from the left (this is the default)
+    flex-wrap: wrap; // Allows children to wrap to the next line if necessary
+    margin: 1px; // Adds some space between the child divs
+    transform: scale(0.5); // Scales the child div to 80% of its original size    
+   
+  }
+ 
+  

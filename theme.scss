@@ -49,10 +49,41 @@ html, body {
   color:cornsilk;
 }
 h1, h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  margin: 15px 5px;
   text-align: center;
   @include text-shadow(4px, 4px, 6px, rgba(0, 0, 0, 0.7)); // Customize as needed
   color:cornsilk;
 }
+.message{
+  padding-top:35px;
+  font-size: 1.7em;
+  max-width: 600px;
+  text-align: justify;
+}
+
+// Define base colors
+$base-link-color: #01ff0a; // Original color
+$hover-link-color: lighten($base-link-color, 10%); // Brighter on hover
+$active-link-color: lighten($base-link-color, 20%); // Even brighter when active
+
+// Apply to anchor links
+a {
+  color: $base-link-color;
+  text-decoration: none; // Optional: Removes underline from links
+
+  &:hover {
+    color: $hover-link-color;
+    text-decoration: underline; // Optional: Adds underline on hover
+  }
+
+  &:active {
+    color: $active-link-color;
+  }
+}
+
 
 
 
