@@ -1,3 +1,5 @@
+@use '../styles.scss';
+
 $page-background: '../assets/wrs.png';
 
 .top-level{
@@ -9,10 +11,11 @@ $page-background: '../assets/wrs.png';
     background-image: url($page-background);
     background-size: contain; /* Cover the entire page */
     background-position: top; /* Center the background image */
-    background-repeat:no-repeat;  /* Do not repeat the image */
+    background-repeat:repeat-y;  /* Do not repeat the image */
     height:100%;
     width:100%;
-    opacity: .4;
+    opacity: .8;
+    filter: blur(3px);
   }
   .runtime {
     position: absolute;
@@ -37,4 +40,7 @@ $page-background: '../assets/wrs.png';
      }
     }
   };
+  .top-router{
+    padding-top:40px;
+  }
 }

@@ -38,3 +38,21 @@ $theme: mat.define-light-theme((
   color: white;
   background-image: radial-gradient(circle at center, rgba(255, 157, 0, 0.469), rgba(255, 166, 0, 0.492), red, purple);
 }
+
+@mixin text-shadow($x-offset: 2px, $y-offset: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
+  text-shadow: $x-offset $y-offset $blur $color;
+}
+
+html, body {
+  font-family: sans-serif;
+  @include text-shadow(4px, 4px, 6px, rgba(0, 0, 0, 0.7)); // Customize as needed
+  color:cornsilk;
+}
+h1, h2 {
+  text-align: center;
+  @include text-shadow(4px, 4px, 6px, rgba(0, 0, 0, 0.7)); // Customize as needed
+  color:cornsilk;
+}
+
+
+
