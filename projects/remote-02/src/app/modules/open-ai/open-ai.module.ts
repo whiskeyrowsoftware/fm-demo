@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { REMOTE_ROUTES } from './open-ai.routes';
 import { OpenAIHomeComponent } from './components/home/home.component';
+import { OpenAiDataService } from './services/open-ai.service';
 
 //Material Imports
 import { MatIconModule } from '@angular/material/icon'
@@ -28,6 +29,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatInputModule,
     MatFormFieldModule,
     MatDividerModule
-  ]
+  ],
+  providers: [OpenAiDataService],
 })
 export class OpenAIModule { }

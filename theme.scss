@@ -34,9 +34,9 @@ $theme: mat.define-light-theme((
 @include mat.all-component-themes($theme);
 
 .mat-toolbar.mat-primary {
-  background: #ff1e1e;
+  background: #fc490e;
   color: white;
-  background-image: radial-gradient(circle at center, rgba(255, 145, 0, 0.597), rgba(251, 96, 0, 0.492), red, purple);
+  background-image: radial-gradient(circle at center, rgba(186, 29, 29, 0.597), rgb(250, 46, 46), rgba(248, 19, 19, 0.75), purple);
 }
 
 @mixin text-shadow($x-offset: 2px, $y-offset: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
