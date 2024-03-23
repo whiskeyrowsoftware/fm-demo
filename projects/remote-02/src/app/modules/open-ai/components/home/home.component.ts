@@ -16,9 +16,9 @@ export class OpenAIHomeComponent {
     this.compName = this.constructor.name;  
   }
   loadImageAI(){
-    this.router.navigateByUrl('/remote-01/open-ai/imageAI');
+    this.router.navigateByUrl('/remote-02/open-ai/image-ai');
   }  
   loadTextAI(){
-    this.router.navigateByUrl('/remote-01/open-ai/textAI');
+    this.router.navigateByUrl('/remote-02/open-ai/text-ai');
   }
 }

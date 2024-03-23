@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'projects/remote-03/src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  message: string = 'Nothing exciting going on here, however, there could be :)'
+  projName = environment.projectName
+  port = window.location.port
+  compName: string = ''
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.compName = this.constructor.name;  
+  }
+ 
 }
