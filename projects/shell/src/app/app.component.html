@@ -2,11 +2,13 @@
   <div class="wrs-backdrop"></div>
   <ng-container *ngIf= "displayRunTime">
     <div class="runtime">
-      <div>MODE:  {{runTimeMode}}</div>
+      <div>MODE:  {{env.runtimeMode}}</div>
+      <div>NG-VER: {{env.ngVersion}}</div>
+      <div>NODE-VER: {{env.nodeVersion}}</div>
     </div>
   </ng-container>
   <app-top-bar></app-top-bar>
-  <div class="top-router">
+  <div class="top-router ">
     <router-outlet></router-outlet>
   </div>
 </div>

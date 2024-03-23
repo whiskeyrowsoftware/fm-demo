@@ -1,6 +1,9 @@
 export const environment = {
+    displayRunTime: false,
     runtimeMode: "",
     projectName: "SHELL",
-    displayRunTime: false
+    author: "Michael Bowman",
+    ngVersion: "16+",
+    nodeVersion: "20.11.1"
 };
 

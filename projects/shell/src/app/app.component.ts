@@ -11,7 +11,7 @@ export class AppComponent {
   compName: string = ''
   runTimeMode = environment.runtimeMode
   displayRunTime = environment.displayRunTime
-  
+  env = environment
   constructor() {
     this.compName = this.constructor.name; 
   }  

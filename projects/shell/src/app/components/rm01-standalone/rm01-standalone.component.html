@@ -1,11 +1,13 @@
-<h3>Loading a standalone from RM01 programatically</h3>
+<div class="top-level">
+    <h4>Load a standalone component from REMOTE-01</h4>
 
-<div>
-    <button (click)="load()">Load the component</button>
+    <div class="buttons">
+        <button mat-raised-button (click)="load()">Click to load a component</button>
+    </div>
+
+    <div class="loaded-components">
+        <div class="component" #placeHolder></div>
+    </div>
+
+    <div class="show-error" *ngIf="showError()===true">Your remote resource failed to load</div>
 </div>
-
-<div class="loaded-components">
-    <div #placeHolder></div>
-</div>
-
-<div class="show-error" *ngIf="showError()===true">Your remote resource failed to load</div>
