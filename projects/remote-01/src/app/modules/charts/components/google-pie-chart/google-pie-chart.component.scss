@@ -1,0 +1,11 @@
+.top-level{
+    align-items: center;
+    .chart-box {
+        display: flex;
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+        #chart_div {
+          // Your child styles
+        }
+      }
+}

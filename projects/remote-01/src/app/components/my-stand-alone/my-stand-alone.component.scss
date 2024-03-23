@@ -3,11 +3,9 @@
   border-color: red;
   border-width:1px;
   border-style: solid;
-  transform: scale(0.5); // Scales the child div to 80% of its original size  
 }
   
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
-  transform: scale(0.5); // Scales the child div to 80% of its original size  
 }

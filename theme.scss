@@ -103,6 +103,7 @@ mat-card-title, mat-card-content{
   @include text-shadow(4px, 4px, 6px, rgba(0, 0, 0, 0.2)); // Customize as needed
 }
 
+/*  NOTE: I will be using this shortly
 // Define base colors
 $base-link-color: #01ff0a; // Original color
 $hover-link-color: lighten($base-link-color, 10%); // Brighter on hover
@@ -122,7 +123,7 @@ a {
     color: $active-link-color;
   }
 }
-
+*/
 
 
 

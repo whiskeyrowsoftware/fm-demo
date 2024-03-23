@@ -5,5 +5,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  overviewImgUrl = '../../../assets/overview1.png'
+  overview1ImgUrl = '../../../assets/overview1.png'
+  overview2ImgUrl = '../../../assets/overview2.png'
 }

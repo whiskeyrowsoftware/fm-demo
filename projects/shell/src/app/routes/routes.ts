@@ -21,7 +21,7 @@ export const routes: Routes = [
       await loadRemoteModule({
         type: 'manifest',
         remoteName: 'remote-01',
-        exposedModule: './Google-Chart-Module'
+        exposedModule: './Chart-Module'
       }).then(m => m.ChartsModule)
         .catch(async () => {
           return await import('../fm-dynamic-errors/fm-dynamic-errors.module').then((m) => m.FmDynamicErrorsModule)

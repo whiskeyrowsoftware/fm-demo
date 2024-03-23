@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { ChartsModule } from './modules/google-charts/charts.module';
+import { ChartsModule } from './modules/charts/charts.module';
 import { HomeComponent } from './components/home/home.component';
 import { REMOTE_ROUTES } from './routes';
 
