@@ -1,0 +1,18 @@
+.top-level {
+    .buttons{
+        display: flex; // Use Flexbox
+        justify-content: center; // Center children horizontally
+        align-items: center; // Center children vertically
+        button {
+            margin: 0 10px; // Adjust the spacing around the buttons as needed
+
+            &:first-child {
+            margin-right: 5px; // Half spacing on the right for the first button
+        }
+
+        &:last-child {
+            margin-left: 5px; // Half spacing on the left for the last button
+        }
+        }
+    }
+}
