@@ -11,7 +11,7 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 // Component Imports
 import { AppComponent } from './app.component'
@@ -40,7 +40,8 @@ import { Rm01StandaloneComponent } from './components/rm01-standalone/rm01-stand
     MatMenuModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

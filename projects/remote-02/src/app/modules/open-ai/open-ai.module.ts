@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { REMOTE_ROUTES } from './open-ai.routes';
 import { OpenAIHomeComponent } from './components/home/home.component';
+import { ImageAiComponent } from './components/image-ai/image-ai.component';
+import { TextAiComponent } from './components/text-ai/text-ai.component';
 import { OpenAiDataService } from './services/open-ai.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Material Imports
 import { MatIconModule } from '@angular/material/icon'
@@ -16,11 +19,15 @@ import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
-    OpenAIHomeComponent
+    OpenAIHomeComponent,
+    ImageAiComponent,
+    TextAiComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(REMOTE_ROUTES),
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     MatIconModule,

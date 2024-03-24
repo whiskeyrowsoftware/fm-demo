@@ -1,7 +1,9 @@
 .top-level{
     text-align: -webkit-center;
-    .overview{
+    .shrinkImg{
         transform: scale(0.7); 
+    }
+    .overview{
         display: flex; 
         flex-direction: row; 
         justify-content: center;

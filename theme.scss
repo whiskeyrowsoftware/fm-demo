@@ -33,15 +33,25 @@ $theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($theme);
 
-.mat-toolbar.mat-primary {
-  background: #fc490e;
-  color: white;
-  background-image: radial-gradient(circle at center, rgba(186, 29, 29, 0.597), rgb(250, 46, 46), rgba(248, 19, 19, 0.75), purple);
-}
-
 @mixin text-shadow($x-offset: 2px, $y-offset: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
   text-shadow: $x-offset $y-offset $blur $color;
 }
+
+.mat-toolbar.mat-primary {
+  background: #df9d5f;
+  color: white;
+  background-image: radial-gradient(circle at center, rgba(217, 160, 61, 0.597), rgb(250, 46, 46), rgba(193, 21, 21, 0.875), purple);
+}
+
+span .mdc-tab__text-label{
+  color:cornsilk !important ;
+  @include text-shadow(4px, 4px, 6px, rgba(0, 0, 0, 0.7));
+}
+
+span .mdc-tab-indicator__content, .mdc-tab-indicator__content--underline{
+  border-color:cornsilk !important;
+}
+
 
 html, body {
   font-family: sans-serif;

@@ -1,0 +1,11 @@
+.top-level{
+    .input-form{
+        display: flex; // Use Flexbox
+        justify-content: center; // Center children horizontally
+        align-items: center; // Center children vertically
+        .textarea{
+            width: 500px;
+            height: 200px;
+        }
+    }
+}

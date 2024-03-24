@@ -4,8 +4,8 @@
     Welcome to the WRS Angular Demo (written by Michael Bowman of WRS).
     Open the README for setup 411.  Use the hamburger to launch menu items 
     </div>
-    <div class="overview">
-        <img [src] = "overview1ImgUrl">
-        <img [src] = "overview2ImgUrl">
-    </div>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab label="High Level"> <img [src] = "overview1ImgUrl"> </mat-tab>
+        <mat-tab label="Run Time"> <img [src] = "overview2ImgUrl"></mat-tab>
+    </mat-tab-group>
 </div>
