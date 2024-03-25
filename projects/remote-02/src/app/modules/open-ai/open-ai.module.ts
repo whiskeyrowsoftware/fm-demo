@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {provideHttpClient} from '@angular/common/http'
 import { RouterModule } from '@angular/router';
 import { REMOTE_ROUTES } from './open-ai.routes';
 import { OpenAIHomeComponent } from './components/home/home.component';
@@ -16,6 +17,7 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,9 @@ import { MatDividerModule } from '@angular/material/divider';
     MatMenuModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule
   ],
-  providers: [OpenAiDataService],
+  providers: [OpenAiDataService, provideHttpClient()],
 })
 export class OpenAIModule { }

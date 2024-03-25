@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { OpenAIModule } from './modules/open-ai/open-ai.module';
 import { HomeComponent } from './components/home/home.component';
 import { REMOTE_ROUTES } from './routes';
-
+import { provideHttpClient } from '@angular/common/http';
 //Material Imports
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
@@ -33,7 +33,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatDividerModule
 
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

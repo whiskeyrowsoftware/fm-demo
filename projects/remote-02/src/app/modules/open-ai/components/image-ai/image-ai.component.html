@@ -3,8 +3,35 @@
     let's see what Open AI returns</h3>
   <div class="input-form">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <textarea class="textarea" formControlName="inputField" placeholder="Type something..."></textarea>
-      <p>Output: {{ output$ | async }}</p> <!-- Display the transformed input -->
+      <div class="input-field">
+        <div class="input-field-label">
+          <mat-label for="inputField">Enter your 'creative image' instruction</mat-label> 
+        </div>
+        <div class="input-field-text-area">
+          <textarea class="text-area" formControlName="inputField" placeholder="Type something kewl...">Groovy</textarea>
+          <div class="word-count">Word Count: {{ output$ | async }}</div>
+        </div>
+      </div>
+      <div class="input-key">
+        <div class="input-key-label">
+          <mat-label for="input-key">Open AI API-KEY</mat-label> 
+        </div> <div class="input-key-text">
+          <input class="api-key" formControlName="inputKey" type="password">  
+        </div>
+      </div>
+      <div class="submit">
+        <ng-container *ngIf="inProgress === false">
+          <button mat-raised-button="submit">Submit To Open AI</button>
+        </ng-container>
+        <ng-container *ngIf="inProgress === true">
+          <div class="standby">Standby, Your Image Is Being Created on OpenAI...</div>
+        </ng-container>
+      </div>
     </form>
   </div>  
+  <ng-container *ngIf="inProgress === false">
+    <div class="theImage">
+      <img [src] = "theImageResult" >
+    </div>
+  </ng-container>
 </div>

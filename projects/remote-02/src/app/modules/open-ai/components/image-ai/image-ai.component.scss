@@ -3,9 +3,41 @@
         display: flex; // Use Flexbox
         justify-content: center; // Center children horizontally
         align-items: center; // Center children vertically
-        .textarea{
-            width: 500px;
-            height: 200px;
+        padding-top: 20px;
+        .input-field {
+            .input-field-label{
+            }
+            .input-field-text-area {
+                .text-area{
+                    width: 400px;
+                    height: 200px;
+                }
+                .word-count{
+                    font-size: smaller;
+                }
+            }
         }
+        .input-key {
+            padding-top: 20px;
+            .input-key-label{
+            }
+            .input-key-text {
+                .api-key{
+                    width: 400px;
+                }
+            }
+        }
+        .submit{
+            padding-top: 10px;
+        }
+        .standby{
+            color:greenyellow;
+        }
+    }
+    .theImage{
+        display: flex; // Use Flexbox
+        justify-content: center; // Center children horizontally
+        align-items: center; // Center children vertically
+        padding-top: 30px;
     }
 }

@@ -36,6 +36,11 @@ $theme: mat.define-light-theme((
 @mixin text-shadow($x-offset: 2px, $y-offset: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
   text-shadow: $x-offset $y-offset $blur $color;
 }
+@mixin red-border{
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+}
 
 .mat-toolbar.mat-primary {
   background: #df9d5f;
