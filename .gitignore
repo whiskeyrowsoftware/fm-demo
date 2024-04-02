@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/node-server/dist
 /tmp
 /out-tsc
 /bazel-out
