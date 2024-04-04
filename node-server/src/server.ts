@@ -4,6 +4,9 @@ import corsOptions from './cors-options.js';
 import cors from 'cors'
 import path from 'path';
 
+// Housekeeping constants
+const  apiFileName = path.normalize(`${process.cwd()}/node-server/src/wrs-node-api.html`);
+
 // Specify a port to listen on
 const PORT = 3000;
 // Create an Express Http Server application
@@ -15,23 +18,18 @@ app.use(cors(corsOptions))
 // Apply the routes for all modules 
 app.use('/api/v1/openai', openAiRoutes)
 
-
-// Define the first API endpoint
+// Return the default API Greeting
 app.get('/api', (req, res) => {
-  const filePath = path.join(__dirname, 'wrs-node-api.html');
-  res.sendFile(filePath, function(err){
+  res.sendFile(apiFileName, function(err){
     if (err) {
-      console.error("Error sending file:", err);
-      res.status(500).send("Error sending file.");
-    } else {
-      console.log("File sent successfully.");
-    }
+      res.status(500).send(`Error sending greeting file:${err}`);
+    } 
   })
 })
 
-// Define the second API endpoint
-app.get('/api/goodbye', (req, res) => {
-  res.json({ message: 'Goodbye from Express!' });
+// Redirect to api URL
+app.get('/', (req, res) => {
+  res.redirect('../api');
 })
 
 // Start the server

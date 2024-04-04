@@ -42,5 +42,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-node-server/dist/*.js
-node-server/dist/*.map
+node-server/dist/**/*.js
+node-server/dist/**/*.map
+

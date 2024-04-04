@@ -1,18 +1,18 @@
 import { Router } from 'express';
-import * as openai from './open-ai-module.js'
+import * as apis from './open-ai-apis.js'
 const router = Router();
 
-router.get('/users',openai.echoGreeting2) 
+router.get('',(req,res) =>{
+    apis.echoGreeting(req,res)
+}) 
 
-
-router.post('/users', (req, res) => {
-    // Handle POST request to create a new user
-    res.send('User created');
-});
+router.post('/createimage', (req, res) => {
+    apis.createImage(req, res)
+})
 
 router.get('/users/:id', (req, res) => {
     // Handle GET request for a specific user by ID
     res.send(`User ${req.params.id}`);
-});
+})
 
 export default router;
