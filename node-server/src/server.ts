@@ -5,7 +5,7 @@ import cors from 'cors'
 import path from 'path';
 
 // Housekeeping constants
-const  apiFileName = path.normalize(`${process.cwd()}/node-server/src/wrs-node-api.html`);
+const  apiFileName = path.normalize(`${process.cwd}/node-server/src/wrs-node-api.html`);
 
 // Specify a port to listen on
 const PORT = 3000;
