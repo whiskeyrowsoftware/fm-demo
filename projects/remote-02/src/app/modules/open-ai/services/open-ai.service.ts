@@ -3,15 +3,29 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment'
 import {OpenAI } from 'openai'
-
+import io, { Socket } from 'socket.io-client';
 @Injectable({
   providedIn: 'root' // This makes the service available throughout the app
 })
 export class OpenAiDataService  {
- 
-
-  constructor(private http: HttpClient) { }
+  private socket: Socket;
   
+  constructor(private http: HttpClient) {
+    this.socket = io('http://localhost:3000');
+  }
+  
+  getDataStream(): Observable<any> {
+    return new Observable(observer => {
+      this.socket.on('dataChunk', (data: any) => {
+        observer.next(data)
+      })
+
+      return () => {
+        this.socket.disconnect();
+      }
+    })
+  }
+
   generateImage(description: string, apiKey: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
