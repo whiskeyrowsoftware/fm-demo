@@ -7,8 +7,8 @@ import { createServer } from 'http';
 import {Server as SocketIOServer} from 'socket.io'
 
 // Housekeeping constants
-const  apiFileName = path.normalize(`${process.cwd()}/src/wrs-node-api.html`);
-const  apiFileNotFound = path.normalize(`${process.cwd()}/src/wrs-node-404.html`);
+const  apiFileName = path.normalize(`${process.cwd()}/node-server/src/wrs-node-api.html`);
+const  apiFileNotFound = path.normalize(`${process.cwd()}/node-server/src/wrs-node-404.html`);
 const PORT = 3000
 const app = express();
 const server = createServer(app)
@@ -48,8 +48,8 @@ app.get('**', (req, res) => {
 io.on('connection', (socket) => {
   console.log('A user connected');
 
-  socket.on('disconnect', () => {
-    console.log('User disconnected');
+  socket.on('disconnect', (reason) => {
+    console.log(`User disconnected: ${reason} `);
   });
 });
 

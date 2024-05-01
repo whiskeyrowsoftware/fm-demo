@@ -4,10 +4,6 @@ import { catchError, of, tap } from 'rxjs'
 
 const router = Router();
 
-router.get('',(req,res) =>{
-    apis.echoGreeting(req,res)
-}) 
-
 router.get('/test', async (req, res) => {
  
   const responseObservable = of(await apis.test(req, res)).pipe(
@@ -16,11 +12,10 @@ router.get('/test', async (req, res) => {
         return of(null); 
       })
     );
-  
+    //
     responseObservable.subscribe({
       next: (response) => {
         if (response) {
-          // Asynchronous response to the client
           console.log(response)
           res.status(200).json({
             user: 'mbowman',
@@ -60,10 +55,13 @@ router.post('/create-image', async (req, res) => {
     });
 });
 
-
 router.get('/users/:id', (req, res) => {
     // Handle GET request for a specific user by ID
     res.send(`User ${req.params.id}`);
 })
+
+router.get('',(req,res) =>{
+  apis.echoGreeting(req,res)
+}) 
 
 export default router;

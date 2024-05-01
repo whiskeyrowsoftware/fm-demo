@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import fetch from 'node-fetch';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment'
 import {OpenAI } from 'openai'
@@ -11,7 +12,7 @@ export class OpenAiDataService  {
   private socket: Socket;
   
   constructor(private http: HttpClient) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('ws://localhost:3000');
   }
   
   getDataStream(): Observable<any> {

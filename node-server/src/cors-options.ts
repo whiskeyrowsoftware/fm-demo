@@ -1,5 +1,5 @@
 const corsOptions  = {
-    origin: 'http://localhost', // Allow only this origin to access the API
+    origin: true, 
     methods: 'GET,POST,PUT,DELETE', // Allowable methods
     allowedHeaders: 'Content-Type,Authorization', // Allowable headers
     credentials: true, // Allow cookies to be included in requests

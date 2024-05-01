@@ -14,13 +14,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ImageAiComponent {
   myForm!: FormGroup
   output$!: Observable<string>
+  dataChunks$!: Observable<any>
   inProgress: boolean = false;
   theImageResult: string = ''
   defValue: string ="create an image that shows two angels flying over a planet with a purple sky and white clouds"
+
   
-  constructor(private openAiDS: OpenAiDataService,
+  constructor(private openaiDS: OpenAiDataService,
               private snackBar: MatSnackBar) {
     this.initFormGroup(); // Initialize the output observable
+    this.initDataChunks();
+  }
+  private initDataChunks() {
+    this.dataChunks$ = of('');
   }
 
   private initFormGroup() {
@@ -38,6 +44,8 @@ export class ImageAiComponent {
         return this.countWords(input);
       })
     );
+
+    this.openaiDS.getDataStream()
   }
   ngAfterViewInit(){
     setTimeout(() => {
@@ -49,7 +57,7 @@ export class ImageAiComponent {
     const words = input.trim().split(/\s+/);
     // Count the words, filtering out any empty strings that may result from multiple consecutive spaces.
     const wordCount = words.filter((word: string | any[]) => word.length > 0).length;
-    return `${wordCount}`;
+    return wordCount;
   }
 
   displayToast(message: string, action: string = 'Close', duration: number = 3000) {
@@ -62,7 +70,7 @@ export class ImageAiComponent {
       const apiKey = this.myForm.controls['inputKey'].value; // Ideally, fetch this securely from your environment or server
       const description = this.myForm.controls['inputField'].value;
       this.inProgress=true;
-      this.openAiDS.generateImage(description, apiKey).subscribe({
+      this.openaiDS.generateImage(description, apiKey).subscribe({
         next: (response: any) => {
           this.displayToast("Your Image Is Below :)",'Close',3000);
           this.theImageResult = response.data[0].url

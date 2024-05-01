@@ -12,7 +12,15 @@
           <div class="word-count">Word Count: {{ output$ | async }}</div>
         </div>
       </div>
+      <div class="input-field">
+        <div class="input-field-label">
+          <div class="word-count">The WORD: {{ dataChunks$ | async }}</div>
+        </div>
+      </div>
       <div class="input-key">
+        <div class="use-node">
+          <mat-checkbox>Use NODE Server</mat-checkbox>
+        </div>
         <div class="input-key-label">
           <mat-label for="input-key">Open AI API-KEY</mat-label> 
         </div> <div class="input-key-text">
